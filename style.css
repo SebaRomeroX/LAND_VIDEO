@@ -1,0 +1,100 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cover-video{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 0;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    animation: revelar ease-out forwards;
+    animation-delay: .4s;
+    animation-duration: 1.4s;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* -----------CONTENT ------------- */
+
+.content {
+    position: fixed;
+
+    background-color: aliceblue;
+    text-align: center;
+    margin: 8vh 0;
+    padding: 2em;
+
+    z-index: 1;
+
+    opacity: 0;
+
+    height: 60vh;
+    border-radius: .4em;
+
+    animation: revelar ease-out reverse forwards;
+    animation-delay: 1.6s;
+    animation-duration: 1s;
+}
+
+.content h1{
+    font-size: 4em;
+    margin-bottom: .4em;
+}
+
+.content p{
+    font-size: 1.2em;
+    margin-top: .4em;
+}
+
+.content input{
+    background-color: black;
+    color: aliceblue;
+    margin-top: 3em;
+    font-size: 1.2em;
+    padding: 1em 2em;
+    border-radius: 1em;
+
+    transition: 0.5s;
+}
+
+.content input:hover{
+    background-color: aliceblue;
+    color: black;
+    border: 1px black solid;
+    scale: 1.1;
+}
+
+@keyframes revelar{     /*  ANIMATION   */
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+@media screen and (min-width:534px){    /*  RESPONSIVE    */
+
+    .content {
+        margin: 14vh 12vw;
+        width: 76vw;
+    }
+}
